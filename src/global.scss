@@ -9,3 +9,54 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+body{
+    background-color: #1c68ad;
+}
+
+#hMenu{
+    background-color: #1c68ad;
+    color: white;
+    padding: 16px;
+    border: 1px solid white;
+  }
+
+  #hMenu:hover{
+    background-color: #1c68ad;
+    color: #a5cf03;
+    padding: 16px;
+    border: 1px solid white;
+  }
+
+  #NossiTitle{
+    background-color: #1c68ad;
+    color: white;
+    padding: 20px;
+  }
+
+  #pagesMenuToggle{
+    --background: #a5cf03;
+    --color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #pagesMenuToggle:hover{
+    --background: #88aa02;
+    --color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  #content{
+    background-color: #1c68ad;
+  }
+
+  #mainContent{
+    --background: #1c68ad;
+  }
+

@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { WordpressService} from './providers/wordpress.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -25,9 +27,32 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private wp: WordpressService,
+    private router: Router
   ) {
     this.initializeApp();
+    this.retrievePages();
+  }
+
+  public pages:any;
+
+  retrievePages(){
+    this.wp.retrievePages().subscribe(results => {
+      this.pages = results;
+    });
+   }
+
+   showPage(pageID){
+    this.router.navigate(['page', pageID]);
+  }
+
+  showDegreePage(pageID, gallery, curriculum){
+    this.router.navigate(['degree-page', pageID, gallery, curriculum]);
+  }
+
+  goHome(pageID){
+    this.router.navigate(['']);
   }
 
   initializeApp() {

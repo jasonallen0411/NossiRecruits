@@ -14,7 +14,12 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'category-list', loadChildren: './category-list/category-list.module#CategoryListPageModule' },
+  { path: 'post', loadChildren: './post/post.module#PostPageModule' },
+  { path: 'page/:id', loadChildren: './page/page.module#PagePageModule' },
+  { path: 'single-page', loadChildren: './single-page/single-page.module#SinglePagePageModule' },
+  { path: 'degree-page/:id/:gal/:cur', loadChildren: './degree-page/degree-page.module#DegreePagePageModule' }
 ];
 
 @NgModule({

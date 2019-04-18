@@ -3,22 +3,103 @@
     <ion-menu>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Menu</ion-title>
+          <ion-title id="NossiTitle">Menu</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
-                {{p.title}}
+      <ion-content id="mainContent">
+        <ion-list id="content">
+          <!-- <ion-menu-toggle auto-hide="false" *ngFor="let page of pages">
+            <ion-item id="pagesMenuToggle" [routerDirection]="'root'" (click)="showPage(page.id)">
+              <ion-label [innerHTML]="page.title.rendered">
               </ion-label>
             </ion-item>
-          </ion-menu-toggle>
+          </ion-menu-toggle> -->
+          <ion-menu-toggle auto-hide="false">
+              <ion-item id="pagesMenuToggle" [routerDirection]="'root'" (click)="goHome()">
+                <!-- <ion-icon slot="start" [name]="p.icon"></ion-icon> -->
+                <ion-label>Home
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+
+            <ion-menu-toggle auto-hide="false">
+                <ion-item id="pagesMenuToggle" [routerDirection]="'root'" (click)="showPage(13)">
+                  <!-- <ion-icon slot="start" [name]="p.icon"></ion-icon> -->
+                  <ion-label>Culture
+                  </ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+              <ion-menu-toggle auto-hide="false">
+                  <ion-item id="pagesMenuToggle" [routerDirection]="'root'" (click)="showPage(16)">
+                    <!-- <ion-icon slot="start" [name]="p.icon"></ion-icon> -->
+                    <ion-label>Apply
+                    </ion-label>
+                  </ion-item>
+                </ion-menu-toggle>
+
+            <ion-menu-toggle auto-hide="false">
+                <ion-item id="pagesMenuToggle" [routerDirection]="'root'" (click)="showDegreePage(435, 439, 437)">
+                  <ion-label>Web and Interactive Design
+                  </ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+              <ion-item id="pagesMenuToggle" [routerDirection]="'root'" (click)="showDegreePage(410, 275, 245)">
+                <ion-label>Illustration
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+
+              <ion-menu-toggle auto-hide="false">
+                  <ion-item id="pagesMenuToggle" [routerDirection]="'root'" (click)="showDegreePage(420, 272, 243)">
+                    <ion-label>Graphic Design
+                    </ion-label>
+                  </ion-item>
+                </ion-menu-toggle>
+
+                <ion-menu-toggle auto-hide="false">
+                    <ion-item id="pagesMenuToggle" [routerDirection]="'root'" (click)="showDegreePage(414, 277, 263)">
+                      <ion-label>Photography
+                      </ion-label>
+                    </ion-item>
+                  </ion-menu-toggle>
+
+                  <ion-menu-toggle auto-hide="false">
+                      <ion-item id="pagesMenuToggle" [routerDirection]="'root'" (click)="showDegreePage(421, 280, 249)">
+                        <ion-label>Videography
+                        </ion-label>
+                      </ion-item>
+                    </ion-menu-toggle>
+
         </ion-list>
       </ion-content>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>
   </ion-split-pane>
 </ion-app>
+
+
+
+
+<!-- Page Ids:
+420 - Graphic Design
+243 - Graphic Design Curriculum
+272 - Graphic Design Gallery
+414 - Photography
+263 - Photography Curriculum
+277 - Photography Gallery
+421 - Videography
+249 - Videography Curriculum
+280 - Videography Gallery
+439 - Web and Interactive Design Gallery
+437 - Web and Interactive Design Curriculum
+435 - Web and Interactive Design
+410 - Illustration
+275 - Illustration Gallery
+245 - Illustration Curriculum
+397 - Web Masters Program
+13  - Culture
+16  - Apply -->
+

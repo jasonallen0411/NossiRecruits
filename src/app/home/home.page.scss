@@ -2,3 +2,161 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+#hMenu{
+  background-color: #1c68ad;
+  color: white;
+  padding: 16px;
+  border: 1px solid white;
+}
+
+#hMenu:hover{
+  background-color: #1c68ad;
+  color: #a5cf03;
+  padding: 16px;
+  border: 1px solid white;
+}
+
+#NossiTitle{
+  background-color: #1c68ad;
+  color: white;
+  padding: 20px;
+}
+
+header{
+  background-color: #1c68ad;
+}
+
+#homeCardTitle{
+  background-color: #1c68ad;
+  color: white;
+  border: 4px solid #a5cf03;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0px auto;
+  width: 100%;
+}
+
+#content{
+  --background: #1c68ad;
+}
+
+
+#homeList{
+  background-color: #1c68ad;
+
+}
+
+#ionCardContent{
+  background-color: #1c68ad;
+
+}
+
+#pageItem{
+  --background: #a5cf03;
+  --color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+#catName{
+  --background: #a5cf03;
+  --color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sc-ion-card-md-h {
+  box-shadow: 0 0 0 transparent;
+}
+
+.degIcons1{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.degIcons2{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.degIcons3{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#code{
+  cursor: pointer;
+  font-size: 70px;
+  color: white;
+}
+
+#code:hover{
+  cursor: pointer;
+  font-size: 70px;
+  color: #a5cf03;
+}
+
+#brush{
+  cursor: pointer;
+  font-size: 60px;
+  color: white;
+}
+
+#brush:hover{
+  cursor: pointer;
+  font-size: 60px;
+  color: #a5cf03;
+}
+
+#create{
+  cursor: pointer;
+  font-size: 60px;
+  margin-left: 30px;
+  color: white;
+}
+
+#create:hover{
+  cursor: pointer;
+  font-size: 60px;
+  margin-left: 30px;
+  color: #a5cf03;
+}
+
+#camera{
+  cursor: pointer;
+  font-size: 60px;
+  color: white;
+}
+
+#camera:hover{
+  cursor: pointer;
+  font-size: 60px;
+  color: #a5cf03;
+}
+
+#videocam{
+  cursor: pointer;
+  font-size: 60px;
+  margin-left: 30px;
+  color: white;
+}
+
+#videocam:hover{
+  cursor: pointer;
+  font-size: 60px;
+  margin-left: 30px;
+  color: #a5cf03;
+}
+
+
+// bluish color: #1c68ad
+// greenish color: #a5cf03
+
+
+
+

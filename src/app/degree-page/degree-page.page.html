@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button id="hMenu"></ion-menu-button>
+        </ion-buttons>
+    <ion-title id="NossiTitle" [innerHTML]="degreeData.title.rendered"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+
+    <ion-segment [(ngModel)]="tabSelection">
+        <ion-segment-button value="about">
+          About
+          <ion-icon name="information-circle-outline"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="gallery">
+          Gallery
+          <ion-icon name="images"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="curriculum">
+          Curriculum
+          <ion-icon name="today"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+      
+      
+      <div [ngSwitch]="tabSelection">
+      
+        <ion-list *ngSwitchCase="'about'">
+            <ion-item>
+                <h1>{{degreeData.title.rendered}}</h1>
+            </ion-item>
+            <ion-item>
+                <div [innerHTML]="degreeData.content.rendered"></div>
+            </ion-item>
+        </ion-list>
+        
+        <ion-list *ngSwitchCase="'gallery'">
+          <div class="video" *ngIf="pageID == 280">
+            <h1 [innerHTML]="galleryData.title.rendered"></h1>
+            <ion-slides pager="true" [options]="slideOpts">
+                  <ion-slide [style.justify-content]="'flex-start'" *ngFor="let vid of galleryImageURLs">
+                    <video controls [src]="vid"></video>
+                  </ion-slide>
+              </ion-slides>
+            </div>
+          <div *ngIf="pageID != 280">
+              <h1 [innerHTML]="galleryData.title.rendered"></h1>
+              <ion-slides pager="true" [options]="slideOpts">
+                    <ion-slide *ngFor="let img of galleryImageURLs">
+                      <img [src]="img" alt="">
+                    </ion-slide>
+                </ion-slides>
+          </div>
+          </ion-list>
+        <ion-list *ngSwitchCase="'curriculum'">
+          <ion-item>
+              <h1 [innerHTML]="curriculumData.title.rendered"></h1>
+          </ion-item>
+          <ion-item>
+                <div [innerHTML]="curriculumData.content.rendered"></div>
+          </ion-item>
+        </ion-list>
+      
+      </div>
+
+
+
+</ion-content>
